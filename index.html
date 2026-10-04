@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kairos Soluções em Análise e Desenvolvimento</title>
+<meta name="description" content="Transformando dados em informação, no tempo certo. Análise de dados e desenvolvimento de soluções sob medida para MEIs, micro e pequenas empresas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F5F2EA;--surface:#FBF9F4;--ink:#0B1F3A;--soft:#5B6B7F;--gold:#C9A24B;--gold-ink:#8A6A1F;--line:#DDD6C5;--btn-bg:#0B1F3A;--btn-fg:#F5F2EA;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0B1F3A;--surface:#12294A;--ink:#F5F2EA;--soft:#A9B8CC;--gold-ink:#C9A24B;--line:#24395A;--btn-bg:#C9A24B;--btn-fg:#0B1F3A}}
+:root[data-theme="dark"]{--bg:#0B1F3A;--surface:#12294A;--ink:#F5F2EA;--soft:#A9B8CC;--gold-ink:#C9A24B;--line:#24395A;--btn-bg:#C9A24B;--btn-fg:#0B1F3A}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+h1,h2,h3,.logo{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;margin:0}
+.logo{letter-spacing:.28em;font-size:22px;text-decoration:none;color:var(--ink)}
+.m{fill:var(--ink)}.a{fill:var(--gold)}.s{fill:var(--soft)}
+.brand{display:block;line-height:0}.brandlogo{width:260px;height:auto}.footlogo{width:170px;height:auto}
+header .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:22px;padding-bottom:22px}
+nav{display:flex;gap:28px;align-items:center;font-size:14px}
+nav a{color:var(--soft);text-decoration:none}
+nav a:hover{color:var(--ink)}
+.btn{display:inline-block;padding:13px 26px;border-radius:4px;background:var(--btn-bg);color:var(--btn-fg);text-decoration:none;font-weight:500;font-size:15px;border:1px solid var(--btn-bg)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn:hover{opacity:.88}
+.hero{position:relative;padding:84px 0 96px;overflow:hidden}
+.hero .big{position:absolute;right:max(24px,calc((100% - 1040px)/2 + 24px));top:28px;width:min(380px,62%);opacity:.14;pointer-events:none}
+.hero .big path{fill:none;stroke:var(--gold);stroke-width:1.2}
+.eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-ink);margin-bottom:18px}
+h1{font-size:clamp(40px,7vw,72px);line-height:1.08;max-width:760px}
+h1 em{font-style:normal;color:var(--gold-ink)}
+.hero p{max-width:540px;color:var(--soft);font-size:18px;margin:24px 0 36px}
+.cta{display:flex;gap:14px;flex-wrap:wrap;position:relative}
+section{padding:72px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(30px,4.5vw,44px);line-height:1.15;margin-bottom:14px}
+.lead{color:var(--soft);max-width:560px;margin:0 0 40px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-top:2px solid var(--gold);border-radius:4px;padding:28px 24px}
+.card h3{font-size:25px;margin-bottom:10px}
+.card p{margin:0;color:var(--soft);font-size:15px}
+.card .tag{color:var(--gold-ink);font-weight:500;margin-bottom:12px}
+.grid.two{grid-template-columns:repeat(2,1fr)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;counter-reset:s}
+.step{counter-increment:s}
+.step::before{content:"0" counter(s);font-family:'Cormorant Garamond',Georgia,serif;font-size:34px;color:var(--gold-ink);display:block;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:14px}
+.step h3{font-size:22px;margin-bottom:6px}
+.step p{margin:0;color:var(--soft);font-size:15px}
+.final{background:#0B1F3A;color:#F5F2EA;text-align:center;padding:88px 0;border:0}
+.final h2{color:#F5F2EA;max-width:640px;margin:0 auto 14px}
+.final p{color:#A9B8CC;margin:0 auto 32px;max-width:480px}
+.final .btn{background:#C9A24B;color:#0B1F3A;border-color:#C9A24B}
+.final small{display:block;margin-top:18px;color:#A9B8CC}
+footer{padding:36px 0;font-size:13px;color:var(--soft);border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+@media (max-width:820px){.grid,.steps{grid-template-columns:1fr 1fr}.grid.two{grid-template-columns:1fr}}
+@media (max-width:560px){.grid,.steps{grid-template-columns:1fr}nav a.hide{display:none}.hero{padding:48px 0 64px}header .brandlogo{width:200px}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="kl" viewBox="140 144 1118 310">
+<path d="M175 268V168Q175 161 174 158Q172 155 169 154Q165 153 157 153Q157 153 157 151Q157 150 157 150Q163 150 169 150Q176 151 183 151Q191 151 198 150Q204 150 209 150Q210 150 210 151Q210 153 209 153Q202 153 198 154Q195 155 193 159Q192 162 192 168V268Q192 274 193 277Q194 280 198 281Q202 282 209 282Q210 282 210 284Q210 285 209 285Q204 285 198 285Q191 285 183 285Q176 285 169 285Q163 285 157 285Q157 285 157 284Q157 282 157 282Q165 282 169 281Q172 280 174 277Q175 274 175 268ZM230 254 197 212 210 200 242 242Q251 254 258 262Q264 270 269 274Q273 278 276 280Q280 282 283 282Q286 282 290 282Q291 282 291 284Q291 285 290 285Q280 285 274 285Q269 285 266 285Q263 285 262 285Q260 285 259 285Q256 285 254 284Q252 283 250 280Q247 277 242 270Q238 264 230 254ZM181 225 236 169Q245 161 243 157Q242 153 230 153Q230 153 230 151Q230 150 230 150Q236 150 242 150Q247 151 256 151Q265 151 271 150Q276 150 281 150Q282 150 282 151Q282 153 281 153Q272 153 262 157Q251 161 242 170L186 225Z" class="m"/>
+<path d="M355 285Q354 285 354 284Q354 282 355 282Q362 282 368 278Q374 273 378 263L422 150Q422 149 424 149Q426 149 427 150L481 267Q484 275 488 279Q492 282 499 282Q499 282 499 284Q499 285 499 285Q496 285 493 285Q491 285 488 284Q485 284 481 284Q473 284 467 284Q461 285 457 285Q453 285 450 285Q449 285 449 284Q449 282 450 282Q459 282 462 279Q465 275 461 267L417 170L425 158L383 264Q380 273 383 278Q386 282 398 282Q398 282 398 284Q398 285 398 285Q392 285 387 285Q382 284 374 284Q368 284 364 285Q360 285 355 285Z" class="a"/>
+<path d="M608 268Q608 274 610 277Q611 280 615 281Q618 282 626 282Q626 282 626 284Q626 285 626 285Q620 285 614 285Q607 285 599 285Q592 285 585 285Q579 285 573 285Q573 285 573 284Q573 282 573 282Q581 282 585 281Q588 280 590 277Q591 274 591 268V168Q591 161 590 158Q588 155 585 154Q581 153 573 153Q573 153 573 151Q573 150 573 150Q579 150 585 150Q592 151 599 151Q607 151 614 150Q621 150 626 150Q626 150 626 151Q626 153 626 153Q618 153 615 154Q611 155 610 159Q608 162 608 168Z" class="m"/>
+<path d="M818 285Q815 285 807 277Q799 268 788 253Q777 237 763 216L778 212Q796 238 808 253Q821 269 831 276Q841 282 850 282Q850 282 850 284Q850 285 850 285Q837 285 830 285Q822 285 818 285ZM767 149Q785 149 794 157Q804 165 804 178Q804 190 797 199Q790 209 779 214Q768 219 755 219Q753 219 750 219Q747 219 745 219V268Q745 274 746 277Q747 280 751 281Q755 282 762 282Q763 282 763 284Q763 285 762 285Q757 285 750 285Q744 285 736 285Q729 285 722 285Q715 285 710 285Q709 285 709 284Q709 282 710 282Q717 282 721 281Q725 280 726 277Q728 274 728 268V168Q728 161 726 158Q725 155 721 154Q718 153 710 153Q710 153 710 151Q710 150 710 150Q715 150 722 150Q729 151 736 151Q743 151 751 150Q760 149 767 149ZM786 184Q786 172 783 166Q780 159 774 156Q768 153 760 153Q752 153 748 156Q745 159 745 168V214Q748 214 751 214Q755 214 757 214Q773 214 780 207Q786 199 786 184Z" class="m"/>
+<path d="M991 288Q976 288 963 282Q950 277 941 267Q933 257 928 245Q923 232 923 218Q923 200 930 187Q936 174 948 165Q959 156 972 152Q986 148 999 148Q1015 148 1027 153Q1040 159 1049 169Q1058 179 1062 191Q1067 203 1067 216Q1067 231 1061 244Q1055 257 1044 267Q1034 277 1020 282Q1007 288 991 288ZM999 283Q1012 283 1024 276Q1035 269 1041 255Q1047 242 1047 222Q1047 202 1040 186Q1033 171 1020 162Q1008 153 990 153Q967 153 955 168Q942 183 942 210Q942 225 946 239Q951 252 958 262Q966 272 976 277Q986 283 999 283Z" class="m"/>
+<path d="M1176 174Q1176 183 1180 189Q1184 196 1191 200Q1198 205 1206 210Q1214 215 1221 220Q1229 225 1233 233Q1238 240 1238 250Q1238 261 1233 269Q1227 278 1217 283Q1207 288 1193 288Q1188 288 1182 287Q1176 286 1171 284Q1166 282 1162 280Q1161 279 1160 278Q1160 277 1160 276L1157 245Q1157 244 1158 244Q1160 243 1160 244Q1162 251 1165 258Q1168 265 1173 270Q1177 276 1184 280Q1190 284 1198 284Q1204 284 1210 281Q1215 279 1219 274Q1222 269 1222 260Q1222 250 1218 243Q1213 235 1206 230Q1199 225 1191 220Q1183 215 1176 210Q1169 205 1165 198Q1161 192 1161 182Q1161 170 1167 163Q1173 155 1183 151Q1192 148 1202 148Q1209 148 1216 149Q1223 150 1228 153Q1230 153 1231 154Q1232 156 1232 157L1233 184Q1233 184 1232 184Q1231 185 1230 184Q1229 180 1227 175Q1225 169 1222 164Q1218 159 1212 155Q1206 151 1198 151Q1191 151 1186 155Q1181 158 1178 163Q1176 168 1176 174Z" class="m"/>
+<rect x="414" y="376" width="572" height="3" class="a"/>
+<path d="M144 449 159 409H166L181 449H174L166 427Q165 424 164 420Q163 417 162 412H163Q162 417 161 420Q159 424 159 427L151 449ZM152 438V433H173V438Z" class="s"/>
+<path d="M197 449V409H205L220 433Q220 434 221 436Q222 437 223 439Q224 441 225 444H225Q224 442 224 439Q224 437 224 435Q224 433 224 432V409H230V449H223L210 428Q209 426 208 424Q206 422 205 420Q204 418 202 414H203Q203 417 203 420Q204 423 204 425Q204 426 204 428V449Z" class="s"/>
+<path d="M247 449 261 409H269L283 449H277L269 427Q268 424 267 420Q266 417 264 412H266Q264 417 263 420Q262 424 261 427L254 449ZM255 438V433H276V438ZM263 405 267 397H273L267 405Z" class="s"/>
+<path d="M300 449V409H306V444H324V449Z" class="s"/>
+<path d="M348 409V449H342V409Z" class="s"/>
+<path d="M382 450Q377 450 374 448Q371 447 369 444Q367 442 367 438H373Q373 440 374 441Q375 443 377 444Q379 444 382 444Q384 444 386 444Q388 443 389 441Q390 440 390 438Q390 436 389 435Q388 434 387 433Q385 432 383 432L378 431Q373 429 371 427Q368 424 368 420Q368 417 370 414Q372 411 375 410Q378 408 382 408Q386 408 389 410Q392 411 394 414Q396 416 396 420H390Q390 417 387 415Q385 414 382 414Q379 414 378 415Q376 415 375 417Q374 418 374 420Q374 422 375 423Q376 424 378 425Q380 425 381 426L385 427Q387 427 389 428Q391 429 393 430Q394 431 395 433Q397 435 397 438Q397 441 395 444Q393 447 390 448Q386 450 382 450Z" class="s"/>
+<path d="M415 449V409H440V414H421V426H439V431H421V444H440V449Z" class="s"/>
+<path d="M485 449V409H510V414H491V426H509V431H491V444H510V449Z" class="s"/>
+<path d="M568 449H558V444H567Q572 444 575 442Q578 440 579 437Q581 434 581 429Q581 424 579 421Q578 418 575 416Q572 414 568 414H557V409H568Q574 409 578 411Q582 414 585 418Q587 423 587 429Q587 435 585 440Q582 444 578 447Q574 449 568 449ZM561 409V449H555V409Z" class="s"/>
+<path d="M605 449V409H630V414H611V426H629V431H611V444H631V449Z" class="s"/>
+<path d="M663 450Q658 450 655 448Q652 447 650 444Q648 442 648 438H654Q654 440 655 441Q657 443 659 444Q661 444 663 444Q665 444 667 444Q669 443 671 441Q672 440 672 438Q672 436 671 435Q670 434 668 433Q666 432 664 432L659 431Q654 429 652 427Q649 424 649 420Q649 417 651 414Q653 411 656 410Q659 408 663 408Q667 408 670 410Q674 411 675 414Q677 416 677 420H671Q671 417 669 415Q666 414 663 414Q661 414 659 415Q657 415 656 417Q655 418 655 420Q655 422 656 423Q657 424 659 425Q661 425 662 426L666 427Q668 427 670 428Q672 429 674 430Q676 431 677 433Q678 435 678 438Q678 441 676 444Q674 447 671 448Q668 450 663 450Z" class="s"/>
+<path d="M696 449V409H721V414H702V426H720V431H702V444H721V449Z" class="s"/>
+<path d="M740 449V409H747L762 433Q763 434 764 436Q765 437 766 439Q767 441 768 444H767Q767 442 767 439Q767 437 767 435Q767 433 767 432V409H773V449H766L752 428Q751 426 750 424Q749 422 748 420Q747 418 745 414H746Q746 417 746 420Q746 423 746 425Q746 426 746 428V449Z" class="s"/>
+<path d="M804 449 790 409H796L804 431Q805 434 806 438Q807 441 809 446H807Q809 441 810 438Q811 434 812 431L819 409H826L812 449Z" class="s"/>
+<path d="M860 450Q854 450 850 447Q846 445 844 440Q841 435 841 429Q841 423 844 418Q846 413 850 411Q854 408 860 408Q865 408 869 411Q873 413 875 418Q878 423 878 429Q878 435 875 440Q873 445 869 447Q865 450 860 450ZM860 444Q863 444 866 442Q868 441 870 437Q872 434 872 429Q872 424 870 421Q868 417 866 416Q863 414 860 414Q856 414 853 416Q851 417 849 421Q848 424 848 429Q848 434 849 437Q851 441 853 442Q856 444 860 444Z" class="s"/>
+<path d="M896 449V409H902V444H920V449Z" class="s"/>
+<path d="M950 449 935 409H942L950 431Q950 434 952 438Q953 441 954 446H953Q954 441 955 438Q956 434 957 431L965 409H971L957 449Z" class="s"/>
+<path d="M994 409V449H988V409Z" class="s"/>
+<path d="M1014 449V409H1023L1032 432Q1032 433 1033 435Q1033 436 1034 438Q1034 440 1035 442Q1035 443 1036 445H1034Q1035 443 1035 442Q1036 440 1036 438Q1037 436 1037 435Q1038 433 1038 432L1047 409H1056V449H1050V427Q1050 426 1050 425Q1050 423 1050 421Q1050 419 1050 417Q1050 415 1050 413H1050Q1050 415 1049 417Q1048 419 1048 421Q1047 423 1047 425Q1046 426 1046 427L1038 449H1032L1024 427Q1024 426 1023 425Q1023 423 1022 421Q1021 419 1021 417Q1020 415 1019 413H1020Q1020 415 1020 417Q1020 419 1020 421Q1020 423 1020 424Q1020 426 1020 427V449Z" class="s"/>
+<path d="M1075 449V409H1101V414H1082V426H1099V431H1082V444H1101V449Z" class="s"/>
+<path d="M1120 449V409H1127L1142 433Q1143 434 1143 436Q1144 437 1145 439Q1147 441 1148 444H1147Q1147 442 1146 439Q1146 437 1146 435Q1146 433 1146 432V409H1152V449H1145L1132 428Q1131 426 1130 424Q1129 422 1127 420Q1126 418 1124 414H1125Q1125 417 1126 420Q1126 423 1126 425Q1126 426 1126 428V449Z" class="s"/>
+<path d="M1170 414V409H1201V414H1189V449H1183V414Z" class="s"/>
+<path d="M1236 450Q1231 450 1227 447Q1223 445 1220 440Q1218 435 1218 429Q1218 423 1220 418Q1223 413 1227 411Q1231 408 1236 408Q1241 408 1245 411Q1249 413 1252 418Q1254 423 1254 429Q1254 435 1252 440Q1249 445 1245 447Q1241 450 1236 450ZM1236 444Q1239 444 1242 442Q1245 441 1246 437Q1248 434 1248 429Q1248 424 1246 421Q1245 417 1242 416Q1239 414 1236 414Q1232 414 1230 416Q1227 417 1225 421Q1224 424 1224 429Q1224 434 1225 437Q1227 441 1230 442Q1232 444 1236 444Z" class="s"/>
+</symbol></svg>
+<header><div class="wrap">
+<a class="brand" href="#topo" aria-label="Kairos Soluções em Análise e Desenvolvimento"><svg class="brandlogo" viewBox="0 0 1118 310"><use href="#kl"/></svg></a>
+<nav><a class="hide" href="#servicos">Serviços</a><a class="hide" href="#metodo">Como trabalhamos</a><a class="hide" href="#projetos">Projetos</a><a class="btn" href="https://wa.me/5516992629626?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Kairos%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">Contato</a></nav>
+</div></header>
+
+<main id="topo">
+<div class="hero"><svg class="big" viewBox="0 0 100 110" aria-hidden="true"><path d="M4 108 L50 4 L96 108"/></svg>
+<div class="wrap">
+<h1>Transformando dados em informação, <em>no tempo certo.</em></h1>
+<p>Desenvolvemos soluções para MEIs, micro e pequenas empresas: organizamos os números do seu negócio e levamos a informação certa à pessoa certa, na hora da decisão.</p>
+<div class="cta"><a class="btn" href="https://wa.me/5516992629626?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Kairos%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">Fale com a Kairos</a><a class="btn ghost" href="#servicos">Conheça os serviços</a></div>
+</div></div>
+
+<section id="servicos"><div class="wrap">
+<h2>O que fazemos</h2>
+<p class="lead">Do dado bruto ao sistema que a sua equipe usa no dia a dia.</p>
+<div class="grid">
+<div class="card"><h3>Análise e visualização</h3><p>Painéis e relatórios claros, que mostram o que está acontecendo no negócio sem planilhas confusas.</p></div>
+<div class="card"><h3>Desenvolvimento sob medida</h3><p>Sistemas e aplicativos feitos para o seu processo, simples de usar e fáceis de manter.</p></div>
+<div class="card"><h3>Organização de dados</h3><p>Limpeza, integração e padronização das suas fontes, para que os números passem a ser confiáveis.</p></div>
+</div></div></section>
+
+<section id="metodo"><div class="wrap">
+<h2>Como trabalhamos</h2>
+<p class="lead">Um caminho simples, com entregas que você enxerga a cada etapa.</p>
+<div class="steps">
+<div class="step"><h3>Entender</h3><p>Conversamos sobre as decisões que você precisa tomar.</p></div>
+<div class="step"><h3>Organizar</h3><p>Reunimos e tratamos os dados que sustentam essas decisões.</p></div>
+<div class="step"><h3>Construir</h3><p>Criamos a solução sob medida, com apoio de inteligência artificial no desenvolvimento.</p></div>
+<div class="step"><h3>Acompanhar</h3><p>Ajustamos conforme o uso e a evolução do negócio.</p></div>
+</div></div></section>
+
+<section id="projetos"><div class="wrap">
+<h2>Projetos desenvolvidos</h2>
+<p class="lead">Soluções sob medida que resolvem problemas reais e facilitam a análise, desenvolvidas com apoio de inteligência artificial.</p>
+<div class="grid two">
+<article class="card"><h3>Aplicativo de Gerenciamento de Viagens</h3><p class="tag">Mais controle e menos processos manuais.</p><p>Solução desenvolvida para simplificar a gestão de viagens, reduzindo tarefas manuais e deixando os custos mais claros para quem decide. As funcionalidades são customizadas para a rotina de cada operação.</p></article>
+<article class="card"><h3>Plataforma de Finanças Pessoais e Empresariais</h3><p class="tag">Mais clareza para decisões financeiras.</p><p>Sistema que facilita a análise das finanças e mostra onde estão os gargalos de gastos, apoiando microempresas na tomada de decisões. As funcionalidades são customizadas conforme a necessidade de cada negócio.</p></article>
+<article class="card"><h3>Sistema de CRM (Customer Relationship Management)</h3><p class="tag">Mais organização no relacionamento com clientes.</p><p>Solução que resolve a gestão do relacionamento comercial, centralizando informações e facilitando a análise do funil de vendas de pequenas empresas. As funcionalidades são customizadas para o processo de cada cliente.</p></article>
+<article class="card"><h3>Software de Gestão de Queijarias Artesanais</h3><p class="tag">Mais controle sobre a produção.</p><p>Software especializado para o setor de laticínios, que facilita o controle de lotes e estoques e a conformidade sanitária. As funcionalidades são customizadas para a realidade de cada queijaria.</p></article>
+</div></div></section>
+
+<section class="final" id="contato"><div class="wrap">
+<h2>Vamos conversar sobre os seus dados?</h2>
+<p>Conte o que você precisa e mostramos como a Kairos pode ajudar. Nosso atendimento é feito pelo WhatsApp.</p>
+<a class="btn" href="https://wa.me/5516992629626?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Kairos%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">Chamar no WhatsApp</a>
+<small>WhatsApp: +55 (16) 99262-9626</small>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+<svg class="footlogo" viewBox="0 0 1118 310" role="img" aria-label="Kairos"><use href="#kl"/></svg>
+<span>Kairos Soluções em Análise e Desenvolvimento · kairosanalytics.com.br</span>
+<span>© 2026 Kairos</span>
+</div></footer>
+</body>
+</html>
